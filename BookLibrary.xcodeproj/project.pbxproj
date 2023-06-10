@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC171DEE2A34A49B004B5675 /* CustomVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC171DED2A34A49B004B5675 /* CustomVisualEffectView.swift */; };
+		CC171DF32A34AC86004B5675 /* AddNewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC171DF12A34AC86004B5675 /* AddNewBookViewController.swift */; };
+		CC171DF42A34AC86004B5675 /* AddNewBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC171DF22A34AC86004B5675 /* AddNewBookViewController.xib */; };
+		CC171DF82A34AF16004B5675 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC171DF62A34AF16004B5675 /* MenuViewController.swift */; };
+		CC171DF92A34AF16004B5675 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC171DF72A34AF16004B5675 /* MenuViewController.xib */; };
+		CC171DFE2A34B132004B5675 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC171DFC2A34B132004B5675 /* SettingsViewController.swift */; };
+		CC171DFF2A34B132004B5675 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC171DFD2A34B132004B5675 /* SettingsViewController.xib */; };
 		CCC5FCA82A33945C001F9A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCA72A33945C001F9A4B /* AppDelegate.swift */; };
 		CCC5FCAA2A33945C001F9A4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCA92A33945C001F9A4B /* SceneDelegate.swift */; };
-		CCC5FCAC2A33945C001F9A4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCAB2A33945C001F9A4B /* ViewController.swift */; };
+		CCC5FCAC2A33945C001F9A4B /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCAB2A33945C001F9A4B /* LibraryViewController.swift */; };
 		CCC5FCAF2A33945C001F9A4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC5FCAD2A33945C001F9A4B /* Main.storyboard */; };
 		CCC5FCB12A33945D001F9A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC5FCB02A33945D001F9A4B /* Assets.xcassets */; };
 		CCC5FCB42A33945D001F9A4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC5FCB22A33945D001F9A4B /* LaunchScreen.storyboard */; };
+		CCC5FCBF2A339A71001F9A4B /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCBD2A339A71001F9A4B /* MyCollectionViewCell.swift */; };
+		CCC5FCC02A339A71001F9A4B /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC5FCBE2A339A71001F9A4B /* MyCollectionViewCell.xib */; };
+		CCC5FCCC2A33B1C7001F9A4B /* BookPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCCB2A33B1C7001F9A4B /* BookPreviewViewController.swift */; };
+		CCC5FCD12A33B82D001F9A4B /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCD02A33B82D001F9A4B /* Books.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC171DED2A34A49B004B5675 /* CustomVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVisualEffectView.swift; sourceTree = "<group>"; };
+		CC171DF12A34AC86004B5675 /* AddNewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBookViewController.swift; sourceTree = "<group>"; };
+		CC171DF22A34AC86004B5675 /* AddNewBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewBookViewController.xib; sourceTree = "<group>"; };
+		CC171DF62A34AF16004B5675 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		CC171DF72A34AF16004B5675 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		CC171DFC2A34B132004B5675 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CC171DFD2A34B132004B5675 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		CCC5FCA42A33945C001F9A4B /* BookLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC5FCA72A33945C001F9A4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC5FCA92A33945C001F9A4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CCC5FCAB2A33945C001F9A4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCC5FCAB2A33945C001F9A4B /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		CCC5FCAE2A33945C001F9A4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCC5FCB02A33945D001F9A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCC5FCB32A33945D001F9A4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCC5FCB52A33945D001F9A4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCC5FCBD2A339A71001F9A4B /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		CCC5FCBE2A339A71001F9A4B /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		CCC5FCCB2A33B1C7001F9A4B /* BookPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPreviewViewController.swift; sourceTree = "<group>"; };
+		CCC5FCD02A33B82D001F9A4B /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +59,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC171DF02A34AC63004B5675 /* AddNewBook */ = {
+			isa = PBXGroup;
+			children = (
+				CC171DF12A34AC86004B5675 /* AddNewBookViewController.swift */,
+				CC171DF22A34AC86004B5675 /* AddNewBookViewController.xib */,
+			);
+			path = AddNewBook;
+			sourceTree = "<group>";
+		};
+		CC171DF52A34AEFA004B5675 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CC171DF62A34AF16004B5675 /* MenuViewController.swift */,
+				CC171DF72A34AF16004B5675 /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		CC171DFA2A34B0EF004B5675 /* BlurredBackground */ = {
+			isa = PBXGroup;
+			children = (
+				CC171DED2A34A49B004B5675 /* CustomVisualEffectView.swift */,
+			);
+			path = BlurredBackground;
+			sourceTree = "<group>";
+		};
+		CC171DFB2A34B11F004B5675 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CC171DFC2A34B132004B5675 /* SettingsViewController.swift */,
+				CC171DFD2A34B132004B5675 /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		CCC5FC9B2A33945C001F9A4B = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +115,37 @@
 			children = (
 				CCC5FCA72A33945C001F9A4B /* AppDelegate.swift */,
 				CCC5FCA92A33945C001F9A4B /* SceneDelegate.swift */,
-				CCC5FCAB2A33945C001F9A4B /* ViewController.swift */,
+				CCC5FCAB2A33945C001F9A4B /* LibraryViewController.swift */,
+				CCC5FCCB2A33B1C7001F9A4B /* BookPreviewViewController.swift */,
+				CCC5FCCF2A33B7F0001F9A4B /* Models */,
+				CC171DFB2A34B11F004B5675 /* Settings */,
+				CC171DF02A34AC63004B5675 /* AddNewBook */,
+				CC171DF52A34AEFA004B5675 /* Menu */,
+				CC171DFA2A34B0EF004B5675 /* BlurredBackground */,
 				CCC5FCAD2A33945C001F9A4B /* Main.storyboard */,
 				CCC5FCB02A33945D001F9A4B /* Assets.xcassets */,
 				CCC5FCB22A33945D001F9A4B /* LaunchScreen.storyboard */,
 				CCC5FCB52A33945D001F9A4B /* Info.plist */,
+				CCC5FCCD2A33B7B7001F9A4B /* Cell */,
 			);
 			path = BookLibrary;
+			sourceTree = "<group>";
+		};
+		CCC5FCCD2A33B7B7001F9A4B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CCC5FCBD2A339A71001F9A4B /* MyCollectionViewCell.swift */,
+				CCC5FCBE2A339A71001F9A4B /* MyCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CCC5FCCF2A33B7F0001F9A4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CCC5FCD02A33B82D001F9A4B /* Books.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +207,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC5FCB42A33945D001F9A4B /* LaunchScreen.storyboard in Resources */,
+				CC171DF92A34AF16004B5675 /* MenuViewController.xib in Resources */,
 				CCC5FCB12A33945D001F9A4B /* Assets.xcassets in Resources */,
+				CCC5FCC02A339A71001F9A4B /* MyCollectionViewCell.xib in Resources */,
 				CCC5FCAF2A33945C001F9A4B /* Main.storyboard in Resources */,
+				CC171DFF2A34B132004B5675 /* SettingsViewController.xib in Resources */,
+				CC171DF42A34AC86004B5675 /* AddNewBookViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +223,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCC5FCAC2A33945C001F9A4B /* ViewController.swift in Sources */,
+				CCC5FCAC2A33945C001F9A4B /* LibraryViewController.swift in Sources */,
+				CC171DF82A34AF16004B5675 /* MenuViewController.swift in Sources */,
+				CC171DFE2A34B132004B5675 /* SettingsViewController.swift in Sources */,
 				CCC5FCA82A33945C001F9A4B /* AppDelegate.swift in Sources */,
+				CCC5FCCC2A33B1C7001F9A4B /* BookPreviewViewController.swift in Sources */,
+				CCC5FCD12A33B82D001F9A4B /* Books.swift in Sources */,
+				CCC5FCBF2A339A71001F9A4B /* MyCollectionViewCell.swift in Sources */,
+				CC171DEE2A34A49B004B5675 /* CustomVisualEffectView.swift in Sources */,
 				CCC5FCAA2A33945C001F9A4B /* SceneDelegate.swift in Sources */,
+				CC171DF32A34AC86004B5675 /* AddNewBookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
