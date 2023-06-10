@@ -43,8 +43,6 @@ class LibraryViewController: UIViewController {
             vc.modalPresentationStyle = .overCurrentContext
             vc.modalTransitionStyle = .crossDissolve
             present(vc, animated: true)
-        
-
     }
 }
 

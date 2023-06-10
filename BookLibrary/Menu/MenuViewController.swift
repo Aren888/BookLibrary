@@ -10,6 +10,7 @@ import UIKit
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var addNewBook: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,13 @@ class MenuViewController: UIViewController {
         view.addSubview(blurredView)
         view.sendSubviewToBack(blurredView)
         dismissButton.layer.cornerRadius = 20
+        addNewBook.layer.cornerRadius = 20
+        
+    }
+    @IBAction func addNewBookAction(_ sender: Any) {
+        let vc = AddNewBookViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     @IBAction func dismissAction(_ sender: Any) {

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNewBookViewController" customModule="BookLibrary" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="Crz-N9-fjy" id="ZM7-VH-xYB"/>
+                <outlet property="authorTextField" destination="b0n-fK-EeY" id="FrZ-TB-JcL"/>
+                <outlet property="availabilityStatusTextField" destination="oCW-Fc-9VA" id="xoZ-36-pYc"/>
+                <outlet property="genreTextField" destination="kKU-hi-LGN" id="s6x-92-ZEr"/>
+                <outlet property="publicationYearTextField" destination="2SE-gm-Sbc" id="SgF-jv-2yf"/>
+                <outlet property="titleTextField" destination="hJJ-QH-y6A" id="28g-9h-ldr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a New Book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hb-uD-2gP">
+                    <rect key="frame" x="0.0" y="69" width="393" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="wYd-E9-kyV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJJ-QH-y6A">
+                    <rect key="frame" x="5" y="119" width="188.66666666666666" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="6TP-1w-62D"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kKU-hi-LGN">
+                    <rect key="frame" x="5" y="169" width="188.66666666666666" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="WyT-MW-gIo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Publication Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2SE-gm-Sbc">
+                    <rect key="frame" x="199.33333333333337" y="169" width="188.66666666666663" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="nCX-LX-nya"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0n-fK-EeY">
+                    <rect key="frame" x="199.33333333333337" y="119" width="188.66666666666663" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fRl-kx-xZ5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Crz-N9-fjy">
+                    <rect key="frame" x="86.666666666666686" y="279" width="220" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="csK-3s-WUR"/>
+                        <constraint firstAttribute="width" constant="220" id="hWB-Fa-ZXD"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Add Book"/>
+                    <connections>
+                        <action selector="addButton:" destination="-1" eventType="touchUpInside" id="s0F-ag-N4m"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Availability Status" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCW-Fc-9VA">
+                    <rect key="frame" x="5" y="219" width="383" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="YgV-sE-QrI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <constraints>
+                <constraint firstItem="1Hb-uD-2gP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0l0-uy-n4n"/>
+                <constraint firstItem="1Hb-uD-2gP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="4LU-Ax-blH"/>
+                <constraint firstItem="oCW-Fc-9VA" firstAttribute="top" secondItem="kKU-hi-LGN" secondAttribute="bottom" constant="10" id="4Pm-xc-aG7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Hb-uD-2gP" secondAttribute="trailing" id="5Ab-nR-V50"/>
+                <constraint firstItem="b0n-fK-EeY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.48" id="AMV-cb-PPZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b0n-fK-EeY" secondAttribute="trailing" constant="5" id="C8Z-qI-V6e"/>
+                <constraint firstItem="Crz-N9-fjy" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="CCg-GF-GK5"/>
+                <constraint firstItem="2SE-gm-Sbc" firstAttribute="top" secondItem="b0n-fK-EeY" secondAttribute="bottom" constant="10" id="CSp-T1-FXG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2SE-gm-Sbc" secondAttribute="trailing" constant="5" id="DAD-aY-dh2"/>
+                <constraint firstItem="kKU-hi-LGN" firstAttribute="top" secondItem="hJJ-QH-y6A" secondAttribute="bottom" constant="10" id="HXn-d1-4dm"/>
+                <constraint firstItem="kKU-hi-LGN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.48" id="IOA-mU-JYq"/>
+                <constraint firstItem="hJJ-QH-y6A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="LwI-to-E6r"/>
+                <constraint firstItem="kKU-hi-LGN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="RVd-7N-Dkr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oCW-Fc-9VA" secondAttribute="trailing" constant="5" id="Rbp-GV-2Rj"/>
+                <constraint firstItem="2SE-gm-Sbc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.48" id="bEW-Oo-jMA"/>
+                <constraint firstItem="hJJ-QH-y6A" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.48" id="pJX-Ob-1JT"/>
+                <constraint firstItem="oCW-Fc-9VA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="tiH-nf-woZ"/>
+                <constraint firstItem="b0n-fK-EeY" firstAttribute="top" secondItem="1Hb-uD-2gP" secondAttribute="bottom" constant="10" id="ur3-8j-ZJR"/>
+                <constraint firstItem="Crz-N9-fjy" firstAttribute="top" secondItem="oCW-Fc-9VA" secondAttribute="bottom" constant="20" id="vEk-id-4bx"/>
+                <constraint firstItem="hJJ-QH-y6A" firstAttribute="top" secondItem="1Hb-uD-2gP" secondAttribute="bottom" constant="10" id="zSK-rR-7em"/>
+            </constraints>
+            <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="BookLibrary" customModuleProvider="target">
             <connections>
+                <outlet property="addNewBook" destination="YgC-Ws-IT9" id="ETU-Gj-DPy"/>
                 <outlet property="dismissButton" destination="fax-f2-5oF" id="nw5-a0-DEw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,18 +34,28 @@
                         <action selector="dismissAction:" destination="-1" eventType="touchUpInside" id="xbi-kF-xbS"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULU-oz-ZLq">
-                    <rect key="frame" x="175" y="384" width="124" height="120"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgC-Ws-IT9">
+                    <rect key="frame" x="40" y="159" width="313" height="50"/>
+                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Tyi-z0-OSg"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Add New Book">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="addNewBookAction:" destination="-1" eventType="touchUpInside" id="1Pw-5T-XsJ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="YgC-Ws-IT9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="1ak-Ie-e1M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YgC-Ws-IT9" secondAttribute="trailing" constant="40" id="53Q-LF-rVR"/>
                 <constraint firstItem="fax-f2-5oF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="5Tm-3E-CbL"/>
+                <constraint firstItem="YgC-Ws-IT9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="Ohq-JR-kxv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fax-f2-5oF" secondAttribute="trailing" constant="5" id="vPu-JA-0iV"/>
             </constraints>
             <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>

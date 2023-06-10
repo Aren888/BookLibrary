@@ -73,6 +73,7 @@
 			children = (
 				CC171DF62A34AF16004B5675 /* MenuViewController.swift */,
 				CC171DF72A34AF16004B5675 /* MenuViewController.xib */,
+				CC171DF02A34AC63004B5675 /* AddNewBook */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -94,6 +95,26 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		CC171E022A34B953004B5675 /* LibraryAndBook */ = {
+			isa = PBXGroup;
+			children = (
+				CCC5FCAB2A33945C001F9A4B /* LibraryViewController.swift */,
+				CCC5FCCB2A33B1C7001F9A4B /* BookPreviewViewController.swift */,
+				CCC5FCCD2A33B7B7001F9A4B /* Cell */,
+			);
+			path = LibraryAndBook;
+			sourceTree = "<group>";
+		};
+		CC171E032A34B9A2004B5675 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				CCC5FCAD2A33945C001F9A4B /* Main.storyboard */,
+				CCC5FCB02A33945D001F9A4B /* Assets.xcassets */,
+				CCC5FCB22A33945D001F9A4B /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		CCC5FC9B2A33945C001F9A4B = {
 			isa = PBXGroup;
 			children = (
@@ -113,20 +134,15 @@
 		CCC5FCA62A33945C001F9A4B /* BookLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				CC171DFA2A34B0EF004B5675 /* BlurredBackground */,
+				CCC5FCCF2A33B7F0001F9A4B /* Models */,
 				CCC5FCA72A33945C001F9A4B /* AppDelegate.swift */,
 				CCC5FCA92A33945C001F9A4B /* SceneDelegate.swift */,
-				CCC5FCAB2A33945C001F9A4B /* LibraryViewController.swift */,
-				CCC5FCCB2A33B1C7001F9A4B /* BookPreviewViewController.swift */,
-				CCC5FCCF2A33B7F0001F9A4B /* Models */,
+				CC171E022A34B953004B5675 /* LibraryAndBook */,
 				CC171DFB2A34B11F004B5675 /* Settings */,
-				CC171DF02A34AC63004B5675 /* AddNewBook */,
 				CC171DF52A34AEFA004B5675 /* Menu */,
-				CC171DFA2A34B0EF004B5675 /* BlurredBackground */,
-				CCC5FCAD2A33945C001F9A4B /* Main.storyboard */,
-				CCC5FCB02A33945D001F9A4B /* Assets.xcassets */,
-				CCC5FCB22A33945D001F9A4B /* LaunchScreen.storyboard */,
+				CC171E032A34B9A2004B5675 /* Supporting */,
 				CCC5FCB52A33945D001F9A4B /* Info.plist */,
-				CCC5FCCD2A33B7B7001F9A4B /* Cell */,
 			);
 			path = BookLibrary;
 			sourceTree = "<group>";
