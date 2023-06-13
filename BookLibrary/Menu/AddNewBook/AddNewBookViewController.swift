@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol AddNewBookDelegate: AnyObject {
+    func didAddNewBook(_ book: Book)
+}
+
 class AddNewBookViewController: UIViewController {
     
+    weak var delegate: AddNewBookDelegate?
     private let randomInt = Int.random(in: 1..<9)
-    var onBookAdded: ((Book) -> Void)?
+    //    var newBookAdded: Book?
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
@@ -31,7 +36,8 @@ class AddNewBookViewController: UIViewController {
                            genre: genre,
                            publicationYear: publicationYear,
                            availability: availabilityStatus)
-        onBookAdded?(newBook)
+        delegate?.didAddNewBook(newBook)
+        dismiss(animated: true)
     }
     
     @IBAction func addButton(_ sender: Any) {
@@ -44,8 +50,6 @@ class AddNewBookViewController: UIViewController {
             addBook(title: title, author: author, genre: genre, publicationYear: publicationYear, availabilityStatus: availabilityStatus)
             print("OK")
         }
-       
-        
     }
 }
 

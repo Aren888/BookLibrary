@@ -7,14 +7,14 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController {
-    
+class LibraryViewController: UIViewController, MenuAddBookDelegate {
+
     @IBOutlet weak var lineHorizontal3Button: UIButton!
     @IBOutlet weak var collectiionView: UICollectionView!
     
     let itemSpacing: CGFloat = 8
     let insetSize: CGFloat = 10
-    let data = [Book(title: "1984", image: UIImage(named: "image1")!, author: "George Orwell", genre: "Dystopian", publicationYear: 1949, availability: "available", borrower: nil, reservation: nil),
+    var data = [Book(title: "1984", image: UIImage(named: "image1")!, author: "George Orwell", genre: "Dystopian", publicationYear: 1949, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "To Kill a Mockingbird", image: UIImage(named: "image2")!, author: "Harper Lee", genre: "Fiction", publicationYear: 1960, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "The Great Gatsby", image: UIImage(named: "image3")!, author: "F. Scott Fitzgerald", genre: "Classic", publicationYear: 1925, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "Harry Potter and the Sorcerer's Stone", image: UIImage(named: "image4")!, author: "J.K. Rowling", genre: "Fantasy", publicationYear: 1997, availability: "available", borrower: nil, reservation: nil),
@@ -39,10 +39,16 @@ class LibraryViewController: UIViewController {
     }
     
     @IBAction func MenuButtonAction(_ sender: Any) {
-         let vc = MenuViewController(nibName: "MenuViewController", bundle: nil)
+        let vc = MenuViewController(nibName: "MenuViewController", bundle: nil)
+            vc.menuDelegate = self
             vc.modalPresentationStyle = .overCurrentContext
             vc.modalTransitionStyle = .crossDissolve
             present(vc, animated: true)
+    }
+    
+    func didAddBook(_ book: Book) {
+        data.append(book)
+        collectiionView.reloadData()
     }
 }
 
@@ -83,6 +89,8 @@ extension LibraryViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: insetSize, bottom: 10, right: insetSize)
     }
+    
+
 }
 
 

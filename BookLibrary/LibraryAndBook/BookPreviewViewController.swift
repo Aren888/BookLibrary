@@ -28,24 +28,23 @@ class BookPreviewViewController: UIViewController {
         present(vc, animated: true)
     }
     
-
-@IBAction func backButtonAction(_ sender: Any) {
-    navigationController?.popViewController(animated: true)
-}
-
-func componentsSetUp() {
-    backButton.layer.cornerRadius = 20
-    backButton.layer.masksToBounds = true
-    settings.layer.cornerRadius = 20
-    settings.layer.masksToBounds = true
-    label.layer.cornerRadius = 20
-    label.layer.masksToBounds = true
-    label.font = .boldSystemFont(ofSize: 12)
-    imageView.layer.cornerRadius = 50
-}
-private func configure() {
-    self.label.text = "\(bookModel.title)"
-    self.imageView.image = bookModel.image
-}
-
+    
+    @IBAction func backButtonAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func componentsSetUp() {
+        backButton.layer.cornerRadius = 20
+        backButton.layer.masksToBounds = true
+        settings.layer.cornerRadius = 20
+        settings.layer.masksToBounds = true
+        label.layer.cornerRadius = 20
+        label.layer.masksToBounds = true
+        label.font = .boldSystemFont(ofSize: 12)
+        imageView.layer.cornerRadius = 50
+    }
+    private func configure() {
+        self.label.text = "\(bookModel.title)"
+        self.imageView.image = bookModel.image
+    }
 }

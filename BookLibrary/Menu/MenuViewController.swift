@@ -7,8 +7,16 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+protocol MenuAddBookDelegate: AnyObject {
+    func didAddBook(_ book: Book)
+}
 
+
+class MenuViewController: UIViewController, AddNewBookDelegate {
+    
+    weak var menuDelegate: MenuAddBookDelegate?
+    
+    @IBOutlet weak var removeBook: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var addNewBook: UIButton!
     
@@ -35,15 +43,31 @@ class MenuViewController: UIViewController {
         view.sendSubviewToBack(blurredView)
         dismissButton.layer.cornerRadius = 20
         addNewBook.layer.cornerRadius = 20
+        removeBook.layer.cornerRadius = 20
+        
+        
+    }
+    
+    @IBAction func removeBookAction(_ sender: Any) {
+        dismiss(animated: false)
+
         
     }
     @IBAction func addNewBookAction(_ sender: Any) {
         let vc = AddNewBookViewController()
+        vc.delegate = self
+        
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
     
     @IBAction func dismissAction(_ sender: Any) {
+        dismiss(animated: false)
+    }
+    
+    func didAddNewBook(_ book: Book) {
+        menuDelegate?.didAddBook(book)
         dismiss(animated: true)
+        dismissAction(dismissButton!)
     }
 }
