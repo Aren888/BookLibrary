@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,7 +20,7 @@
                         <rect key="frame" x="0.0" y="40" width="200" height="217"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0V-QR-ZNe">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="40"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="7gA-hf-i0Q"/>
@@ -30,30 +29,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5B-gd-bZj">
-                        <rect key="frame" x="180" y="10" width="20" height="30"/>
-                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="20" id="9dx-0a-jEt"/>
-                            <constraint firstAttribute="height" constant="30" id="x7e-qp-Ogs"/>
-                        </constraints>
-                        <color key="tintColor" systemColor="systemRedColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
-                        <connections>
-                            <action selector="removeButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="C2d-yg-onS"/>
-                        </connections>
-                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="O5B-gd-bZj" secondAttribute="trailing" id="45m-tp-7AS"/>
                 <constraint firstItem="9mB-CQ-SqD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Tp-PW-1Wq"/>
-                <constraint firstItem="O5B-gd-bZj" firstAttribute="leading" secondItem="K0V-QR-ZNe" secondAttribute="trailing" id="7lA-XP-d2M"/>
                 <constraint firstAttribute="trailing" secondItem="9mB-CQ-SqD" secondAttribute="trailing" id="BRN-PR-S76"/>
-                <constraint firstItem="O5B-gd-bZj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="cPa-gh-Hgb"/>
+                <constraint firstAttribute="trailing" secondItem="K0V-QR-ZNe" secondAttribute="trailing" id="OhQ-U7-n8P"/>
                 <constraint firstItem="9mB-CQ-SqD" firstAttribute="top" secondItem="K0V-QR-ZNe" secondAttribute="bottom" id="jJQ-0P-Cuq"/>
                 <constraint firstItem="K0V-QR-ZNe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="trR-Hm-dg1"/>
                 <constraint firstAttribute="bottom" secondItem="9mB-CQ-SqD" secondAttribute="bottom" id="yUL-Gy-gMt"/>
@@ -63,15 +46,8 @@
             <connections>
                 <outlet property="imageView" destination="9mB-CQ-SqD" id="tzp-YG-tIL"/>
                 <outlet property="label" destination="K0V-QR-ZNe" id="Gv7-Ye-fsR"/>
-                <outlet property="removeButton" destination="O5B-gd-bZj" id="F7Y-T4-yGQ"/>
             </connections>
             <point key="canvasLocation" x="212.21374045801525" y="-84.859154929577471"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="trash" catalog="system" width="117" height="128"/>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

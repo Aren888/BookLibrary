@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Book {
+struct Book: Equatable {
     var title: String
     var image: UIImage
     var author: String
@@ -17,6 +17,8 @@ struct Book {
     var availability: String
     var borrower: Borrower?
     var reservation: Reservation?
+    
+    static func == (lhs: Book, rhs: Book) -> Bool { true }
 }
 
 struct Borrower {

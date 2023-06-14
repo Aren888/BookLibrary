@@ -7,15 +7,15 @@
 
 import UIKit
 
-protocol AddNewBookDelegate: AnyObject {
+protocol BookDelegate: AnyObject {
     func didAddNewBook(_ book: Book)
+    func didRemoveBook(title: String)
 }
 
 class AddNewBookViewController: UIViewController {
     
-    weak var delegate: AddNewBookDelegate?
+    weak var delegate: BookDelegate?
     private let randomInt = Int.random(in: 1..<9)
-    //    var newBookAdded: Book?
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!

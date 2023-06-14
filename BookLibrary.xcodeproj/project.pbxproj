@@ -14,6 +14,8 @@
 		CC171DF92A34AF16004B5675 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC171DF72A34AF16004B5675 /* MenuViewController.xib */; };
 		CC171DFE2A34B132004B5675 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC171DFC2A34B132004B5675 /* SettingsViewController.swift */; };
 		CC171DFF2A34B132004B5675 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC171DFD2A34B132004B5675 /* SettingsViewController.xib */; };
+		CCB650932A38A3DD0028D935 /* RemoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB650912A38A3DD0028D935 /* RemoveViewController.swift */; };
+		CCB650942A38A3DD0028D935 /* RemoveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB650922A38A3DD0028D935 /* RemoveViewController.xib */; };
 		CCC5FCA82A33945C001F9A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCA72A33945C001F9A4B /* AppDelegate.swift */; };
 		CCC5FCAA2A33945C001F9A4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCA92A33945C001F9A4B /* SceneDelegate.swift */; };
 		CCC5FCAC2A33945C001F9A4B /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5FCAB2A33945C001F9A4B /* LibraryViewController.swift */; };
@@ -34,6 +36,8 @@
 		CC171DF72A34AF16004B5675 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		CC171DFC2A34B132004B5675 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CC171DFD2A34B132004B5675 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		CCB650912A38A3DD0028D935 /* RemoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveViewController.swift; sourceTree = "<group>"; };
+		CCB650922A38A3DD0028D935 /* RemoveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemoveViewController.xib; sourceTree = "<group>"; };
 		CCC5FCA42A33945C001F9A4B /* BookLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC5FCA72A33945C001F9A4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC5FCA92A33945C001F9A4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			children = (
 				CC171DF62A34AF16004B5675 /* MenuViewController.swift */,
 				CC171DF72A34AF16004B5675 /* MenuViewController.xib */,
+				CCB650902A38A3BC0028D935 /* RemoveTheBook */,
 				CC171DF02A34AC63004B5675 /* AddNewBook */,
 			);
 			path = Menu;
@@ -113,6 +118,15 @@
 				CCC5FCB22A33945D001F9A4B /* LaunchScreen.storyboard */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		CCB650902A38A3BC0028D935 /* RemoveTheBook */ = {
+			isa = PBXGroup;
+			children = (
+				CCB650912A38A3DD0028D935 /* RemoveViewController.swift */,
+				CCB650922A38A3DD0028D935 /* RemoveViewController.xib */,
+			);
+			path = RemoveTheBook;
 			sourceTree = "<group>";
 		};
 		CCC5FC9B2A33945C001F9A4B = {
@@ -228,6 +242,7 @@
 				CCC5FCC02A339A71001F9A4B /* MyCollectionViewCell.xib in Resources */,
 				CCC5FCAF2A33945C001F9A4B /* Main.storyboard in Resources */,
 				CC171DFF2A34B132004B5675 /* SettingsViewController.xib in Resources */,
+				CCB650942A38A3DD0028D935 /* RemoveViewController.xib in Resources */,
 				CC171DF42A34AC86004B5675 /* AddNewBookViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +257,7 @@
 				CCC5FCAC2A33945C001F9A4B /* LibraryViewController.swift in Sources */,
 				CC171DF82A34AF16004B5675 /* MenuViewController.swift in Sources */,
 				CC171DFE2A34B132004B5675 /* SettingsViewController.swift in Sources */,
+				CCB650932A38A3DD0028D935 /* RemoveViewController.swift in Sources */,
 				CCC5FCA82A33945C001F9A4B /* AppDelegate.swift in Sources */,
 				CCC5FCCC2A33B1C7001F9A4B /* BookPreviewViewController.swift in Sources */,
 				CCC5FCD12A33B82D001F9A4B /* Books.swift in Sources */,

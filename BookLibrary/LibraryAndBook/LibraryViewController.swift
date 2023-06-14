@@ -8,6 +8,8 @@
 import UIKit
 
 class LibraryViewController: UIViewController, MenuAddBookDelegate {
+    
+
 
     @IBOutlet weak var lineHorizontal3Button: UIButton!
     @IBOutlet weak var collectiionView: UICollectionView!
@@ -18,16 +20,7 @@ class LibraryViewController: UIViewController, MenuAddBookDelegate {
                 Book(title: "To Kill a Mockingbird", image: UIImage(named: "image2")!, author: "Harper Lee", genre: "Fiction", publicationYear: 1960, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "The Great Gatsby", image: UIImage(named: "image3")!, author: "F. Scott Fitzgerald", genre: "Classic", publicationYear: 1925, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "Harry Potter and the Sorcerer's Stone", image: UIImage(named: "image4")!, author: "J.K. Rowling", genre: "Fantasy", publicationYear: 1997, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "Pride and Prejudice", image: UIImage(named: "image5")!, author: "Jane Austen", genre: "Romance", publicationYear: 1813, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "1984", image: UIImage(named: "image1")!, author: "George Orwell", genre: "Dystopian", publicationYear: 1949, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "To Kill a Mockingbird", image: UIImage(named: "image2")!, author: "Harper Lee", genre: "Fiction", publicationYear: 1960, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "The Great Gatsby", image: UIImage(named: "image3")!, author: "F. Scott Fitzgerald", genre: "Classic", publicationYear: 1925, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "Harry Potter and the Sorcerer's Stone", image: UIImage(named: "image4")!, author: "J.K. Rowling", genre: "Fantasy", publicationYear: 1997, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "Pride and Prejudice", image: UIImage(named: "image5")!, author: "Jane Austen", genre: "Romance", publicationYear: 1813, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "1984", image: UIImage(named: "image1")!, author: "George Orwell", genre: "Dystopian", publicationYear: 1949, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "To Kill a Mockingbird", image: UIImage(named: "image2")!, author: "Harper Lee", genre: "Fiction", publicationYear: 1960, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "The Great Gatsby", image: UIImage(named: "image3")!, author: "F. Scott Fitzgerald", genre: "Classic", publicationYear: 1925, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "Harry Potter and the Sorcerer's Stone", image: UIImage(named: "image4")!, author: "J.K. Rowling", genre: "Fantasy", publicationYear: 1997, availability: "available", borrower: nil, reservation: nil)
+                Book(title: "Pride and Prejudice", image: UIImage(named: "image5")!, author: "Jane Austen", genre: "Romance", publicationYear: 1813, availability: "available", borrower: nil, reservation: nil)
     ]
     
     override func viewDidLoad() {
@@ -50,8 +43,17 @@ class LibraryViewController: UIViewController, MenuAddBookDelegate {
         data.append(book)
         collectiionView.reloadData()
     }
+   
+    func didRemoveBook(title: String) {
+        for index in 0..<data.count {
+            if data[index].title == title {
+                data.remove(at: index)
+                break
+            }
+        }
+        collectiionView.reloadData()
+    }
 }
-
 
 // TODO: -  UICollectionViewDelegate  UICollectionViewDataSource  UICollectionViewDelegateFlowLayout
 
@@ -89,8 +91,7 @@ extension LibraryViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: insetSize, bottom: 10, right: insetSize)
     }
-    
-
 }
+
 
 

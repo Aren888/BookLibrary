@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RemoveViewController" customModule="BookLibrary" customModuleProvider="target">
+            <connections>
+                <outlet property="pickerView" destination="LcF-XM-ybE" id="boT-3y-MMq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcF-XM-ybE">
+                    <rect key="frame" x="40" y="169" width="313" height="216"/>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove The Book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdM-Gz-Hqu">
+                    <rect key="frame" x="40" y="99" width="313" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2xu-4t-7E5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mC-es-2fm">
+                    <rect key="frame" x="86.666666666666686" y="405" width="220" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="OfG-4C-9mL"/>
+                        <constraint firstAttribute="height" constant="40" id="Zl1-sI-OiB"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Remove Book"/>
+                    <connections>
+                        <action selector="removeBookAction:" destination="-1" eventType="touchUpInside" id="led-sL-e3R"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9mC-es-2fm" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="010-q2-1Mo"/>
+                <constraint firstItem="pdM-Gz-Hqu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="7zp-zx-zX8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pdM-Gz-Hqu" secondAttribute="trailing" constant="40" id="9Ib-qX-Evm"/>
+                <constraint firstItem="LcF-XM-ybE" firstAttribute="top" secondItem="pdM-Gz-Hqu" secondAttribute="bottom" constant="20" id="GiD-4v-eZ6"/>
+                <constraint firstItem="9mC-es-2fm" firstAttribute="top" secondItem="LcF-XM-ybE" secondAttribute="bottom" constant="20" id="KlM-w7-gty"/>
+                <constraint firstItem="LcF-XM-ybE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-40" id="TPl-MN-48s"/>
+                <constraint firstItem="pdM-Gz-Hqu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="VlL-2W-kVy"/>
+                <constraint firstItem="LcF-XM-ybE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="cnZ-yg-2Zz"/>
+            </constraints>
+            <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>
+        </view>
+    </objects>
+</document>

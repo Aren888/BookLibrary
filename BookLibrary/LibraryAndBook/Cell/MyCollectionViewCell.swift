@@ -14,28 +14,18 @@ class MyCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "MyCollectionViewCell", bundle: nil)
     }
     
-    @IBOutlet weak var removeButton: UIButton!
     @IBOutlet weak var label: UILabel!
     @IBOutlet var imageView: UIImageView!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 20
         layer.masksToBounds = true
-        removeButton.isHidden = true
     }
     
-    @IBAction func removeButton(_ sender: Any) {
-        
-        removeButton.isHidden = false
-
-        
-    }
     func configure(with book: Book) {
-         imageView.image = book.image
-         self.label.text = book.title
+        imageView.image = book.image
+        self.label.text = book.title
         label.layer.cornerRadius = 20
     }
 }

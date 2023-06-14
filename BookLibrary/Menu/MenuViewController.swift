@@ -9,10 +9,14 @@ import UIKit
 
 protocol MenuAddBookDelegate: AnyObject {
     func didAddBook(_ book: Book)
+    func didRemoveBook(title: String)
 }
 
 
-class MenuViewController: UIViewController, AddNewBookDelegate {
+class MenuViewController: UIViewController, BookDelegate {
+ 
+ 
+    
     
     weak var menuDelegate: MenuAddBookDelegate?
     
@@ -44,19 +48,19 @@ class MenuViewController: UIViewController, AddNewBookDelegate {
         dismissButton.layer.cornerRadius = 20
         addNewBook.layer.cornerRadius = 20
         removeBook.layer.cornerRadius = 20
-        
-        
     }
     
     @IBAction func removeBookAction(_ sender: Any) {
-        dismiss(animated: false)
-
+        let vc = RemoveViewController()
+        vc.delegate = self
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
         
     }
+    
     @IBAction func addNewBookAction(_ sender: Any) {
         let vc = AddNewBookViewController()
         vc.delegate = self
-        
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
@@ -67,6 +71,12 @@ class MenuViewController: UIViewController, AddNewBookDelegate {
     
     func didAddNewBook(_ book: Book) {
         menuDelegate?.didAddBook(book)
+        dismiss(animated: true)
+        dismissAction(dismissButton!)
+    }
+    
+    func didRemoveBook(title: String) {
+        menuDelegate?.didRemoveBook(title: title)
         dismiss(animated: true)
         dismissAction(dismissButton!)
     }
