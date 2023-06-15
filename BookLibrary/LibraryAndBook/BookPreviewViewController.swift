@@ -30,6 +30,7 @@ class BookPreviewViewController: UIViewController {
     
     
     @IBAction func backButtonAction(_ sender: Any) {
+        navigationController?.navigationBar.isHidden = false
         navigationController?.popViewController(animated: true)
     }
     

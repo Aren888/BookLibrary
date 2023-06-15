@@ -9,18 +9,25 @@ import UIKit
 
 class LibraryViewController: UIViewController, MenuAddBookDelegate {
     
-
-
     @IBOutlet weak var lineHorizontal3Button: UIButton!
     @IBOutlet weak var collectiionView: UICollectionView!
+    let searchController = UISearchController()
+    
     
     let itemSpacing: CGFloat = 8
     let insetSize: CGFloat = 10
+    var booktitle: [String] = []
+    var bookAuthor: [String] = []
     var data = [Book(title: "1984", image: UIImage(named: "image1")!, author: "George Orwell", genre: "Dystopian", publicationYear: 1949, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "To Kill a Mockingbird", image: UIImage(named: "image2")!, author: "Harper Lee", genre: "Fiction", publicationYear: 1960, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "The Great Gatsby", image: UIImage(named: "image3")!, author: "F. Scott Fitzgerald", genre: "Classic", publicationYear: 1925, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "Harry Potter and the Sorcerer's Stone", image: UIImage(named: "image4")!, author: "J.K. Rowling", genre: "Fantasy", publicationYear: 1997, availability: "available", borrower: nil, reservation: nil),
-                Book(title: "Pride and Prejudice", image: UIImage(named: "image5")!, author: "Jane Austen", genre: "Romance", publicationYear: 1813, availability: "available", borrower: nil, reservation: nil)
+                Book(title: "Pride and Prejudice", image: UIImage(named: "image5")!, author: "Jane Austen", genre: "Romance", publicationYear: 1813, availability: "available", borrower: nil, reservation: nil),
+                Book(title: "The Catcher in the Rye", image: UIImage(named: "image6")!, author: "J.D. Salinger", genre: "Coming-of-Age", publicationYear: 1951, availability: "available", borrower: nil, reservation: nil),
+                Book(title: "To the Lighthouse", image: UIImage(named: "image7")!, author: "Virginia Woolf", genre: "Modernist", publicationYear: 1927, availability: "available", borrower: nil, reservation: nil),
+                Book(title: "Moby-Dick", image: UIImage(named: "image8")!, author: "Herman Melville", genre: "Adventure", publicationYear: 1851, availability: "available", borrower: nil, reservation: nil),
+                Book(title: "The Lord of the Rings", image: UIImage(named: "image9")!, author: "J.R.R. Tolkien", genre: "Fantasy", publicationYear: 1954, availability: "available", borrower: nil, reservation: nil),
+                Book(title: "Crime and Punishment", image: UIImage(named: "image10")!, author: "Fyodor Dostoevsky", genre: "Psychological Fiction", publicationYear: 1866, availability: "available", borrower: nil, reservation: nil)
     ]
     
     override func viewDidLoad() {
@@ -29,21 +36,42 @@ class LibraryViewController: UIViewController, MenuAddBookDelegate {
         collectiionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
         collectiionView.delegate = self
         collectiionView.dataSource = self
+        searchControllerSetUp()
+        getTitleAndAuthor()
     }
     
     @IBAction func MenuButtonAction(_ sender: Any) {
         let vc = MenuViewController(nibName: "MenuViewController", bundle: nil)
-            vc.menuDelegate = self
-            vc.modalPresentationStyle = .overCurrentContext
-            vc.modalTransitionStyle = .crossDissolve
-            present(vc, animated: true)
+        vc.menuDelegate = self
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
+        navigationController?.navigationBar.isHidden.toggle()
+    }
+    
+    func getTitleAndAuthor() {
+        for index in 0..<data.count {
+            booktitle.append(data[index].title)
+            bookAuthor.append(data[index].author)
+        }
+        print("Booktitle -> \(booktitle)")
+        print("Booktitle -> \(bookAuthor)")
+    }
+    
+    func searchControllerSetUp() {
+        title = "Search"
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        searchController.searchBar.placeholder = "Search"
+        searchController.obscuresBackgroundDuringPresentation = false
+        
     }
     
     func didAddBook(_ book: Book) {
         data.append(book)
         collectiionView.reloadData()
     }
-   
+    
     func didRemoveBook(title: String) {
         for index in 0..<data.count {
             if data[index].title == title {
@@ -58,6 +86,7 @@ class LibraryViewController: UIViewController, MenuAddBookDelegate {
 // TODO: -  UICollectionViewDelegate  UICollectionViewDataSource  UICollectionViewDelegateFlowLayout
 
 extension LibraryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         print("You Tapped Me \(indexPath.row + 1)")
@@ -65,7 +94,7 @@ extension LibraryViewController: UICollectionViewDelegate, UICollectionViewDataS
         let vc = storyboard.instantiateViewController(withIdentifier: "BookPreviewViewControllerID") as! BookPreviewViewController
         vc.bookModel = data[indexPath.item]
         navigationController?.pushViewController(vc, animated: true)
-        
+        navigationController?.navigationBar.isHidden.toggle()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -93,5 +122,12 @@ extension LibraryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
 }
 
-
-
+extension LibraryViewController: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        print(text)
+        
+    }
+}

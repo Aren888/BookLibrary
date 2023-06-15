@@ -11,10 +11,14 @@
         <!--Navigation Controller-->
         <scene sceneID="LDi-Ga-J6V">
             <objects>
-                <navigationController navigationBarHidden="YES" id="HKZ-vM-mwL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VoJ-NR-cvx">
+                <navigationController id="HKZ-vM-mwL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VoJ-NR-cvx">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EfP-n7-wnw">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IKt-ZH-7AI"/>
                     </connections>
@@ -32,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lqg-Qs-qnr">
-                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <rect key="frame" x="0.0" y="108" width="393" height="710"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YJE-B5-57B">
                                     <size key="itemSize" width="128" height="128"/>
@@ -52,18 +56,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Books" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkL-nD-ReZ">
-                                <rect key="frame" x="146.66666666666666" y="59" width="100" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="RNf-25-ozY"/>
-                                    <constraint firstAttribute="width" constant="100" id="iEu-Dq-5Mx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqi-3y-VlY">
-                                <rect key="frame" x="308" y="64" width="80" height="40"/>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lqg-Qs-qnr" secondAttribute="trailing" id="Rs2-7Z-CdV"/>
+                            <constraint firstItem="Lqg-Qs-qnr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="SwN-Vg-5pP"/>
+                            <constraint firstItem="Lqg-Qs-qnr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cmT-Qi-a5a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lqg-Qs-qnr" secondAttribute="bottom" id="kIJ-N7-GSi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ltj-sO-lNB">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="aps-Qv-LUz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wqi-3y-VlY">
+                                <rect key="frame" x="297" y="2" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="6Yv-Il-Aob"/>
@@ -78,21 +85,8 @@
                                     <action selector="settingsButtonAction:" destination="3Hj-Pd-BhU" eventType="touchUpInside" id="00v-Un-2Og"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="wqi-3y-VlY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="3Ga-ME-GxS"/>
-                            <constraint firstItem="LkL-nD-ReZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Eyr-n2-nmV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wqi-3y-VlY" secondAttribute="trailing" constant="5" id="L9U-jY-Qy0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lqg-Qs-qnr" secondAttribute="trailing" id="Rs2-7Z-CdV"/>
-                            <constraint firstItem="Lqg-Qs-qnr" firstAttribute="top" secondItem="LkL-nD-ReZ" secondAttribute="bottom" id="X9s-5c-hD3"/>
-                            <constraint firstItem="Lqg-Qs-qnr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cmT-Qi-a5a"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lqg-Qs-qnr" secondAttribute="bottom" id="kIJ-N7-GSi"/>
-                            <constraint firstItem="LkL-nD-ReZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oj8-k6-hbu"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Ltj-sO-lNB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectiionView" destination="Lqg-Qs-qnr" id="YAs-V1-qxA"/>
                         <outlet property="lineHorizontal3Button" destination="wqi-3y-VlY" id="CXm-cI-Jnw"/>

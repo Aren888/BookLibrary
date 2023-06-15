@@ -63,7 +63,10 @@ class MenuViewController: UIViewController, BookDelegate {
     }
     
     @IBAction func dismissAction(_ sender: Any) {
-        dismiss(animated: false)
+        if let libraryVC = presentingViewController as? LibraryViewController {
+                libraryVC.navigationController?.navigationBar.isHidden.toggle()
+            }
+            dismiss(animated: false)
     }
     
     func didAddNewBook(_ book: Book) {
