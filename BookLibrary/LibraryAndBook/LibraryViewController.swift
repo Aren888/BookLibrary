@@ -16,8 +16,11 @@ class LibraryViewController: UIViewController, MenuAddBookDelegate {
     
     let itemSpacing: CGFloat = 8
     let insetSize: CGFloat = 10
-    var booktitle: [String] = []
-    var bookAuthor: [String] = []
+    var filteredData: [Book] = []
+    var isSearching: Bool {
+        return searchController.isActive && !searchController.searchBar.text!.isEmpty
+    }
+    
     var data = [Book(title: "1984", image: UIImage(named: "image1")!, author: "George Orwell", genre: "Dystopian", publicationYear: 1949, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "To Kill a Mockingbird", image: UIImage(named: "image2")!, author: "Harper Lee", genre: "Fiction", publicationYear: 1960, availability: "available", borrower: nil, reservation: nil),
                 Book(title: "The Great Gatsby", image: UIImage(named: "image3")!, author: "F. Scott Fitzgerald", genre: "Classic", publicationYear: 1925, availability: "available", borrower: nil, reservation: nil),
@@ -37,7 +40,6 @@ class LibraryViewController: UIViewController, MenuAddBookDelegate {
         collectiionView.delegate = self
         collectiionView.dataSource = self
         searchControllerSetUp()
-        getTitleAndAuthor()
     }
     
     @IBAction func MenuButtonAction(_ sender: Any) {
@@ -49,22 +51,13 @@ class LibraryViewController: UIViewController, MenuAddBookDelegate {
         navigationController?.navigationBar.isHidden.toggle()
     }
     
-    func getTitleAndAuthor() {
-        for index in 0..<data.count {
-            booktitle.append(data[index].title)
-            bookAuthor.append(data[index].author)
-        }
-        print("Booktitle -> \(booktitle)")
-        print("Booktitle -> \(bookAuthor)")
-    }
-    
     func searchControllerSetUp() {
         title = "Search"
         searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
-        searchController.searchBar.placeholder = "Search"
         searchController.obscuresBackgroundDuringPresentation = false
-        
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     func didAddBook(_ book: Book) {
@@ -98,13 +91,22 @@ extension LibraryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if isSearching {
+            return filteredData.count
+        }
         return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
+        let book: Book
+        if isSearching {
+            book = filteredData[indexPath.item]
+        } else {
+            book = data[indexPath.item]
+        }
         
-        cell.configure(with: data[indexPath.item])
+        cell.configure(with: book)
         
         return cell
     }
@@ -122,12 +124,24 @@ extension LibraryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
 }
 
-extension LibraryViewController: UISearchResultsUpdating, UISearchBarDelegate {
+extension LibraryViewController: UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else {
-            return
+        if let searchText = searchController.searchBar.text {
+            filterResults(for: searchText)
         }
-        print(text)
-        
     }
+    
+    private func filterResults(for searchText: String) {
+        filteredData = []
+        
+        for book in data {
+            if book.title.lowercased().contains(searchText.lowercased()) ||
+                book.author.lowercased().contains(searchText.lowercased()) {
+                filteredData.append(book)
+            }
+        }
+        collectiionView.reloadData()
+    }
+    
 }
