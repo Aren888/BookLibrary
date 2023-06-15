@@ -20,7 +20,6 @@ class RemoveViewController: UIViewController {
         pickerView.reloadAllComponents()
         pickerView.delegate = self
         pickerView.dataSource = self
-        
     }
     
     private func getDataVariable() {
@@ -31,13 +30,14 @@ class RemoveViewController: UIViewController {
     
     @IBAction func removeBookAction(_ sender: Any) {
         delegate?.didRemoveBook(title: selectedBookTitle)
-        getDataVariable() 
+        getDataVariable()
         dismiss(animated: true)
     }
 }
 
 
 extension RemoveViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

@@ -14,10 +14,7 @@ protocol MenuAddBookDelegate: AnyObject {
 
 
 class MenuViewController: UIViewController, BookDelegate {
- 
- 
-    
-    
+
     weak var menuDelegate: MenuAddBookDelegate?
     
     @IBOutlet weak var removeBook: UIButton!
