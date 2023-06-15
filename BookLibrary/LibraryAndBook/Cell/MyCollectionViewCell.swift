@@ -14,9 +14,10 @@ class MyCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "MyCollectionViewCell", bundle: nil)
     }
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 20
@@ -25,7 +26,8 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     func configure(with book: Book) {
         imageView.image = book.image
-        self.label.text = book.title
-        label.layer.cornerRadius = 20
+        self.titleLabel.text = book.title
+        self.authorLabel.text = "Author - \(book.author)"
+        titleLabel.layer.cornerRadius = 20
     }
 }

@@ -85,7 +85,13 @@ extension LibraryViewController: UICollectionViewDelegate, UICollectionViewDataS
         print("You Tapped Me \(indexPath.row + 1)")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "BookPreviewViewControllerID") as! BookPreviewViewController
-        vc.bookModel = data[indexPath.item]
+        
+        if isSearching {
+            vc.bookModel = filteredData[indexPath.item]
+        } else {
+            vc.bookModel = data[indexPath.item]
+        }
+        
         navigationController?.pushViewController(vc, animated: true)
         navigationController?.navigationBar.isHidden.toggle()
     }
