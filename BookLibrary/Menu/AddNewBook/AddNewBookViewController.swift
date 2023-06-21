@@ -30,15 +30,24 @@ class AddNewBookViewController: UIViewController {
     }
     
     func addBook(title: String, author: String, genre: String, publicationYear: Int, availabilityStatus: String) {
+        var availability: AvailabilityStatus = .available
+
+        if availabilityStatus.lowercased() == "borrowed" {
+            availability = .borrowed
+        } else if availabilityStatus.lowercased() == "reserved" {
+            availability = .reserved
+        }
+
         let newBook = Book(title: title,
                            image: UIImage(named: "image\(randomInt)")!,
                            author: author,
                            genre: genre,
                            publicationYear: publicationYear,
-                           availability: availabilityStatus)
+                           availability: availability)
         delegate?.didAddNewBook(newBook)
         dismiss(animated: true)
     }
+
     
     @IBAction func addButton(_ sender: Any) {
         

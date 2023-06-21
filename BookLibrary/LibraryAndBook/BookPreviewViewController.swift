@@ -13,7 +13,7 @@ class BookPreviewViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet var imageView: UIImageView!
     
-    var bookModel: Book = Book(title: "", image: UIImage(), author: "", genre: "", publicationYear: 0, availability: "")
+    var bookModel: Book = Book(title: "", image: UIImage(), author: "", genre: "", publicationYear: 0, availability: .available)
     
     override func viewDidLoad() {
         super.viewDidLoad()
